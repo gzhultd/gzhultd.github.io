@@ -1,0 +1,120 @@
+/* ===============================
+    FEATURE SECTION ONE CSS
+================================== */
+
+.feature-section {
+  position: relative;
+  padding-top: 120px;
+
+  .section-title {
+    padding: 0 20px;
+  }
+}
+
+.single-feature {
+  margin-bottom: 10px;
+  padding: 40px 30px;
+  @include transition(.3s);
+  border-radius: 5px;
+
+  @media #{$lg} {
+    padding: 35px 25px;
+  }
+
+  &:hover {
+    @include box-shadow(8px 8px 25px rgba(222, 222, 222, 0.25));
+
+    .feature-icon {
+      background-color: $primary-color;
+    }
+  }
+
+  .feature-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    background: $secondary-color;
+    color: $white;
+    font-size: 40px;
+    @include transition(.3s);
+  }
+
+  .feature-content {
+
+    h4 {
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+  }
+}
+
+
+/* ======== feature-section-1 ======== */ 
+
+.feature-section-1 {
+  position: relative;
+  z-index: 1;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(172.08deg, #D1D0FF 2.36%, #EFF0FF 74.46%);
+    opacity: 0.2;
+    top: 0;
+    left: -10%;
+    @include transform(skewY(-4deg));
+    z-index: -1;
+  }
+  
+
+  .feature-image {
+
+    @media #{$md, $xs} {
+      margin-top: 60px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+
+/* ======== feature-section-2 ======== */ 
+
+.feature-section-2 {
+
+  .feature-content-wrapper {
+
+    @media #{$desktop} {
+      padding-right: 60px;
+    }
+
+  }
+
+  .feature-image {
+
+    @media #{$md, $xs} {
+      margin-top: 60px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+}

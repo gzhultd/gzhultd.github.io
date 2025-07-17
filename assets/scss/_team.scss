@@ -1,0 +1,44 @@
+/* =====================
+    TEAM SECTION CSS
+======================== */
+.team-section {
+
+  .single-team {
+    position: relative;
+    margin-bottom: 50px;
+    padding-bottom: 105px;
+
+    .team-image {
+      width: 100%;
+      border-radius: 50%;
+      margin: auto;
+      padding: 0 35px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .team-info {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      background: $white;
+      @include box-shadow(0px 0px 50px rgba(183, 199, 240, 0.25));
+      padding: 180px 30px 25px;
+      width: 100%;
+      text-align: center;
+      border-radius: 14px;
+      z-index: -1;
+
+      h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

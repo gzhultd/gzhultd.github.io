@@ -1,0 +1,148 @@
+/* =====================
+    HOW WORKS CSS
+======================== */
+
+.pricing-section {
+  padding-top: 160px;
+
+  .section-title {
+    margin-bottom: 60px;
+    
+    @media #{$desktop, $laptop} {
+      padding: 0px 40px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+  }
+}
+
+.single-pricing {
+  background: $white;
+  @include box-shadow(0px 0px 50px rgba(183, 199, 240, 0.25));
+  border-radius: 14px;
+  padding: 52px 30px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 117px;
+    left: 0;
+    bottom: 0;
+    background: $secondary-color;
+    border-radius: 21px;
+    @include transform(rotate(32.85deg));
+    opacity: .2;
+  }
+
+  &::before {
+    background: $secondary-color;
+    left: -18px;
+    bottom: -44px;
+  }
+
+  &::after {
+    background: $primary-color;
+    left: 16px;
+    bottom: -50px;
+  }
+
+  .pricing-header {
+    border-bottom: 1px solid $black-10;
+
+    h5 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+
+      span {
+        font-size: 16px;
+        color: $black-50;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .pricing-body {
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    ul {
+
+      li {
+        margin-bottom: 12px;
+
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  .pricing-footer {
+
+    .border-btn {
+      color: $black-90;
+      background: transparent;
+      border-color: $black-50;
+
+      &:hover {
+        color: $black-100;
+        
+        &::after {
+          background: $black-10;
+        }
+      }
+    }
+  }
+
+  &.standard {
+
+    &::before {
+      opacity: 1;
+      right: -18px;
+      top: -44px;
+      left: auto;
+    }
+  
+    &::after {
+      opacity: 1;
+      right: 16px;
+      top: -50px;
+      left: auto;
+    }
+
+    .pricing-header {
+
+      .package-price {
+        color: $primary-color;
+      }
+    }
+
+    .pricing-footer {
+      .main-btn {
+        color: $white;
+        background: $primary-color;
+
+        &:hover {
+          &::after {
+            background: rgba($black-100, .05);
+          }
+        }
+      }
+    }
+  }
+}

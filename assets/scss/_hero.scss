@@ -1,0 +1,67 @@
+/* ====================
+		HERO CSS
+======================= */
+
+.hero-section {
+	position: relative;
+	overflow: hidden;
+	height: 820px;
+	display: flex;
+	align-items: center;
+	background-image: url('../images/hero/hero-bg.svg');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	z-index: 1;
+
+	@media #{$laptop} {
+		height: 750px;
+	}
+	@media #{$lg} {
+		height: 700px;
+	}
+
+	@media #{$md, $xs} {
+		height: auto;
+		padding: 150px 0 50px;
+	}
+
+
+	.hero-content {
+
+		h1 {
+			margin-bottom: 15px;
+			color: $white;
+
+			@media #{$lg} {
+				font-size: 50px;
+			}
+
+			@media #{$xs} {
+				font-size: 45px;
+			}
+		}
+
+		p {
+			margin-bottom: 30px;
+			color: $white-80;
+			font-size: 18px;
+		}
+	}
+
+	.hero-image {
+		padding-top: 50px;
+
+		img {
+
+			@media #{$lg, $laptop} {
+				width: 100%;
+			}
+
+			@media #{$md, $xs} {
+				max-width: 100%;
+				margin: auto;
+			}
+		}
+	}
+}
