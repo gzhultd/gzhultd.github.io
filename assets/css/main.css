@@ -962,6 +962,12 @@ p {
   background: #0FC4A5;
 }
 
+.single-pricing.standard .pricing-footer .main-btn.border-btn {
+  color: rgba(0, 0, 0, 0.9);
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
 .single-pricing.standard .pricing-footer .main-btn:hover::after {
   background: rgba(0, 0, 0, 0.05);
 }
@@ -1986,4 +1992,189 @@ p {
 
 .pb-225 {
   padding-bottom: 225px;
+}
+
+/* ===================== contact-section ===================== */
+.contact-section {
+  background: #f8f9fa;
+}
+
+.contact-section .section-title h2 {
+  color: #2d2d2d;
+}
+
+.contact-section .section-title p {
+  color: #6c757d;
+  font-size: 17px;
+  margin-top: 12px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #dde1e7;
+  border-radius: 4px;
+  background: #fff;
+  color: #2d2d2d;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #adb5bd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0FC4A5;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+  padding: 16px 48px;
+  font-size: 17px;
+  border: none;
+}
+
+/* ===================== contact page ===================== */
+.contact-hero-section {
+  position: relative;
+  min-height: 520px;
+  background: url('../images/hero/hero-bg.svg') bottom center / cover no-repeat;
+  background-color: #5b4fcf;
+  padding-top: 180px;
+  padding-bottom: 80px;
+}
+
+.contact-hero-overlay {
+  display: none;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-hero-content h1 {
+  color: #fff;
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+
+.contact-hero-content p {
+  color: rgba(255,255,255,0.85);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-page-section {
+  padding: 100px 0 140px;
+}
+
+.cp-heading {
+  font-size: 45px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.cp-subtext {
+  color: #6c757d;
+  font-size: 16px;
+  margin-bottom: 56px;
+}
+
+.cp-form .cp-field {
+  margin-bottom: 44px;
+}
+
+.cp-form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 6px;
+}
+
+.cp-required {
+  color: #e74c3c;
+  margin-left: 2px;
+}
+
+.cp-hint {
+  display: block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+}
+
+.cp-form input,
+.cp-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #c8cdd6;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.cp-form input::placeholder,
+.cp-form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.cp-form input:focus,
+.cp-form textarea:focus {
+  border-bottom-color: #0FC4A5;
+}
+
+.cp-form textarea {
+  resize: vertical;
+}
+
+.cp-consent {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+.cp-submit {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #2d2d2d;
+  color: #2d2d2d;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cp-submit:hover {
+  color: #0FC4A5;
+  border-bottom-color: #0FC4A5;
+}
+
+.contact-btn-disabled {
+  background: #b0b8c1 !important;
+  cursor: default;
+  pointer-events: none;
 }
