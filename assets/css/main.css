@@ -7,15 +7,16 @@
 /*===========================
 		COMMON css
 ===========================*/
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: normal;
   font-style: normal;
+
   color: rgba(0, 0, 0, 0.7);
   overflow-x: hidden;
 }
@@ -76,7 +77,7 @@ h5,
 h6 {
   font-weight: 700;
   margin: 0px;
-  font-family: "Lora", serif;
+  font-family: "Playfair Display", serif;
 }
 
 h1 a,
@@ -1140,7 +1141,7 @@ p {
 .testimonial-section .testimonial-active-wrapper .single-testimonial .info h6 {
   font-size: 16px;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   margin-bottom: 5px;
 }
 
