@@ -1203,16 +1203,12 @@ p {
 
 .footer .footer-widget .logo {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer .footer-widget .desc {
   margin-bottom: 25px;
-}
-
-@media only screen and (min-width: 1400px) {
-  .footer .footer-widget .desc {
-    padding-right: 50px;
-  }
 }
 
 .footer .footer-widget .social-links {
