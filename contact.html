@@ -107,29 +107,30 @@
             <form action="https://formspree.io/f/xdayjwgn" method="POST" class="cp-form" id="cpForm" novalidate>
 
               <div class="cp-field">
-                <label>What can we help you achieve? <span class="cp-required">*</span></label>
-                <textarea name="message" rows="4" placeholder="Message" required></textarea>
+                <label for="cp-message">What can we help you achieve? <span class="cp-required">*</span></label>
+                <textarea id="cp-message" name="message" rows="4" placeholder="Message" required></textarea>
               </div>
 
               <div class="cp-field">
-                <label>Your name <span class="cp-required">*</span></label>
-                <input type="text" name="name" placeholder="Name" required>
+                <label for="cp-name">Your name <span class="cp-required">*</span></label>
+                <input id="cp-name" type="text" name="name" placeholder="Name" required>
               </div>
 
               <div class="cp-field">
-                <label>Email <span class="cp-required">*</span></label>
+                <label for="cp-email">Email <span class="cp-required">*</span></label>
                 <small class="cp-hint">Please provide a work email so we can discuss your business needs</small>
-                <input type="email" name="email" placeholder="Email" required>
+                <input id="cp-email" type="email" name="email" placeholder="Email" required>
               </div>
 
               <p class="cp-consent">By clicking below, you consent to GZhu Limited contacting you to discuss your enquiry and provide occasional relevant communications. You may unsubscribe at any time.</p>
 
-              <button type="submit" class="main-btn btn-hover">Send message</button>
+              <p id="cpServerError" class="cp-server-error" style="display:none">Something went wrong. Please try again.</p>
+
+              <button type="submit" id="cpSubmit" class="main-btn btn-hover">Send message</button>
             </form>
 
             <div id="cpSuccess" style="display:none; padding: 48px 0;">
-              <p style="font-size:22px; font-weight:600; color:#2d2d2d;">Thanks for reaching out.</p>
-              <p style="color:#6c757d; margin-top:10px; font-size:16px;">We'll be in touch within two business days.</p>
+              <p style="font-size:20px; font-weight:500; color:#6c757d; font-family:'Playfair Display', serif;">Thanks for reaching out.</p>
             </div>
           </div>
         </div>
@@ -199,6 +200,8 @@
         if (!form) return;
 
         var fields = ['message', 'name', 'email'];
+        var btn = document.getElementById('cpSubmit');
+        var serverError = document.getElementById('cpServerError');
 
         function showError(el, msg) {
           el.classList.add('cp-invalid');
@@ -216,6 +219,7 @@
 
         function validate() {
           var valid = true;
+          var firstInvalid = null;
           fields.forEach(function (name) {
             var el = form.querySelector('[name="' + name + '"]');
             clearError(el);
@@ -226,9 +230,22 @@
             } else if (name === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
               msg = 'Please enter a valid email address.';
             }
-            if (msg) { showError(el, msg); valid = false; }
+            if (msg) {
+              showError(el, msg);
+              if (!firstInvalid) firstInvalid = el;
+              valid = false;
+            }
           });
+          if (firstInvalid) {
+            firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstInvalid.focus();
+          }
           return valid;
+        }
+
+        function setLoading(loading) {
+          btn.disabled = loading;
+          btn.textContent = loading ? 'Sending…' : 'Send message';
         }
 
         fields.forEach(function (name) {
@@ -238,8 +255,10 @@
 
         form.addEventListener('submit', function (e) {
           e.preventDefault();
+          serverError.style.display = 'none';
           if (!validate()) return;
 
+          setLoading(true);
           var action = form.getAttribute('action');
           if (action.indexOf('YOUR_FORM_ID') !== -1) {
             form.style.display = 'none';
@@ -255,10 +274,12 @@
               form.style.display = 'none';
               document.getElementById('cpSuccess').style.display = 'block';
             } else {
-              alert('Something went wrong. Please try again.');
+              setLoading(false);
+              serverError.style.display = 'block';
             }
           }).catch(function () {
-            alert('Something went wrong. Please try again.');
+            setLoading(false);
+            serverError.style.display = 'block';
           });
         });
       })();

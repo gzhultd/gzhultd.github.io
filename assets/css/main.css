@@ -2188,3 +2188,14 @@ p {
   cursor: default;
   pointer-events: none;
 }
+
+.cp-server-error {
+  font-size: 14px;
+  color: #e74c3c;
+  margin-bottom: 16px;
+}
+
+.main-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
