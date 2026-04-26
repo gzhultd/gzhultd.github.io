@@ -735,7 +735,7 @@ p {
 ================================== */
 .feature-section {
   position: relative;
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .feature-section .section-title {
@@ -838,7 +838,7 @@ p {
     HOW WORKS CSS
 ======================== */
 .pricing-section {
-  padding-top: 160px;
+  padding-top: 100px;
 }
 
 .pricing-section .section-title {
@@ -1707,7 +1707,7 @@ p {
 }
 
 .pt-100 {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .pt-105 {
@@ -1755,7 +1755,7 @@ p {
 }
 
 .pt-160 {
-  padding-top: 160px;
+  padding-top: 100px;
 }
 
 .pt-165 {
@@ -2075,7 +2075,7 @@ p {
 }
 
 .contact-page-section {
-  padding: 100px 0 140px;
+  padding: 80px 0 80px;
 }
 
 .cp-heading {
