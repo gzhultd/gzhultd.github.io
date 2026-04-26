@@ -2075,7 +2075,7 @@ p {
 }
 
 .contact-page-section {
-  padding: 80px 0 80px;
+  padding: 80px 0 40px;
 }
 
 .cp-heading {
@@ -2116,6 +2116,7 @@ p {
 
 .cp-form input,
 .cp-form textarea {
+  display: block;
   width: 100%;
   background: transparent;
   border: none;
@@ -2139,6 +2140,18 @@ p {
   border-bottom-color: #0FC4A5;
 }
 
+.cp-form input.cp-invalid,
+.cp-form textarea.cp-invalid {
+  border-bottom-color: #e74c3c;
+}
+
+.cp-error-msg {
+  display: block;
+  font-size: 13px;
+  color: #e74c3c;
+  margin-top: 6px;
+}
+
 .cp-form textarea {
   resize: vertical;
 }
@@ -2147,6 +2160,7 @@ p {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
   line-height: 1.6;
+  margin-top: 12px;
   margin-bottom: 32px;
   max-width: 580px;
 }
