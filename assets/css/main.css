@@ -865,6 +865,8 @@ p {
   overflow: hidden;
   z-index: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .single-pricing::after, .single-pricing::before {
@@ -915,6 +917,7 @@ p {
 .single-pricing .pricing-body {
   padding-top: 30px;
   padding-bottom: 25px;
+  flex: 1;
 }
 
 .single-pricing .pricing-body ul li {
