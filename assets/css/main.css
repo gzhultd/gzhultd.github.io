@@ -2202,3 +2202,57 @@ p {
   opacity: 0.65;
   cursor: not-allowed;
 }
+
+/* ======== gate callout strip ======== */
+.gate-callout-section {
+  padding: 60px 0;
+  background: #f4f7ff;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.gate-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.gate-callout-label {
+  display: inline-block;
+  background: rgba(79, 70, 229, 0.08);
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.gate-callout-text h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1d2130;
+  margin-bottom: 8px;
+}
+
+.gate-callout-text p {
+  color: #535967;
+  font-size: 15px;
+  max-width: 620px;
+  margin: 0;
+}
+
+.gate-callout-action {
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .gate-callout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
