@@ -2256,3 +2256,9 @@ p {
     align-items: flex-start;
   }
 }
+
+/* ======== centered industry cards ======== */
+.single-feature.text-center .feature-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
