@@ -2203,23 +2203,32 @@ p {
   cursor: not-allowed;
 }
 
-/* ======== gate callout strip ======== */
-.gate-callout-section {
-  padding: 60px 0;
+/* ======== products section ======== */
+.products-section {
+  padding: 100px 0;
   background: #f4f7ff;
   border-top: 1px solid #e5e7eb;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.gate-callout {
+.product-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 40px;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.gate-callout-label {
+.product-card:hover {
+  box-shadow: 0 20px 40px rgba(17, 24, 39, 0.08);
+  transform: translateY(-4px);
+}
+
+.product-label {
   display: inline-block;
   background: rgba(79, 70, 229, 0.08);
   color: #4f46e5;
@@ -2229,32 +2238,29 @@ p {
   text-transform: uppercase;
   padding: 4px 12px;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
-.gate-callout-text h4 {
-  font-size: 22px;
+.product-card.jielong .product-label {
+  background: rgba(5, 150, 105, 0.08);
+  color: #059669;
+}
+
+.product-card h4 {
+  font-size: 24px;
   font-weight: 700;
   color: #1d2130;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.gate-callout-text p {
+.product-card p {
   color: #535967;
   font-size: 15px;
-  max-width: 620px;
-  margin: 0;
+  margin-bottom: 28px;
 }
 
-.gate-callout-action {
-  flex-shrink: 0;
-}
-
-@media (max-width: 767px) {
-  .gate-callout {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.product-card .main-btn {
+  margin-top: auto;
 }
 
 /* ======== centered industry cards ======== */
