@@ -91,33 +91,6 @@
 	// WOW active
     new WOW().init();
 
-    //======== tiny slider for clients
-	tns({
-        container: '.testimonial-active',
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayButtonOutput: false,
-        mouseDrag: true,
-        gutter: 0,
-        nav: false,
-        navPosition: "bottom",
-        controls: true,
-        controlsText: [
-            '<i class="lni lni-chevron-left"></i>',
-            '<i class="lni lni-chevron-right"></i>',
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-
-            992: {
-                items: 2,
-            }
-        }
-        
-      });
-
     // ====== scroll top js
     function scrollTo(element, to = 0, duration= 1000) {
 
