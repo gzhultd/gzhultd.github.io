@@ -217,6 +217,10 @@
         if (!form) return;
 
         var fields = ['message', 'name', 'email'];
+
+        // Prefill the message from ?message=... (e.g. links from the Jielong pricing page).
+        var prefill = new URLSearchParams(window.location.search).get('message');
+        if (prefill) form.querySelector('[name="message"]').value = prefill.slice(0, 500);
         var btn = document.getElementById('cpSubmit');
         var serverError = document.getElementById('cpServerError');
 
